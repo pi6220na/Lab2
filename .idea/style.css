@@ -1,0 +1,63 @@
+
+p {
+    color: blue;
+    font-size: 20px;
+}
+/* Center H1 elements */
+h1 {
+    color: white;
+    text-align: center;
+}
+body {
+    background-color: orange;
+}
+/*Remove underline from links,
+set background color*/
+a {
+    background-color: lightgreen;
+    text-decoration: none;
+}
+/*Add a border for image elements */
+/*img {
+    border-style: dotted;
+    border-width: 5px;
+    border-color: red;
+}*/
+
+#favorite_band {
+    background-color: yellow
+}
+
+#most_favorite {
+    text-decoration: underline;
+}
+
+th {
+    color: darkgreen;
+}
+td {
+    color: red;
+}
+
+/* taken from: https://www.w3schools.com/css/css_table.asp */
+table, th, td {
+    border: 1px solid black;
+}
+
+.favorite_section {
+    border-style: solid;
+    border-width: 5px;
+    border-color: black;
+    margin: 5px;
+}
+
+/* This is a CSS comment. */
+/* Change these to colors of your choice */
+
+.jumbotron {
+    background-color : #0c36a0;
+    color : white;
+    text-align: center;
+    font-style: normal;
+    background: url('kittens.jpg');
+}

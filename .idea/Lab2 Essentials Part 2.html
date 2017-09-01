@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        <!--metadata e.g. links to stylesheets here -->
+        <title>Lab2 Essentials Part 2</title>
+
+        <!-- The viewport is the visible area of a page. Pages may be wider
+    than the screen or browser window; and pages are often longer than
+    the browser window. This tag sets the width of the page equal to the
+    width of the browser window. The height stays the same. -->
+        <meta name="viewport" content="width=device-width initial-scale=1">
+
+        <!-- Include Bootstrap. This downloads Bootstrap from a CDN. You can
+         also host Bootstrap on your own server, but it's usually faster for the
+         user for their browser to fetch it from a CDN. -->
+        <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        <!-- Nav components, and dropdowns, need Bootstrap's JavaScript to do anything.
+  And JavaScript requires JQuery, so include that too -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    </head>
+
+    <body>
+    <!-- document content here -->
+
+        <div class="container">
+
+            <h1> Some of my favorite things </h1>
+
+            <div class="row">
+                <div class="col-md-3">
+                    <img src="2001_A_Space_Odyssey_(1968)_theatrical_poster_variant.jpg">
+                </div>
+
+                <div class="col-md-9">
+                    <div class='favorite_section'>
+                        <h2>Movies</h2>
+
+                        <p> <span id="movie_title">2001 A Space Odyssey </span></p>
+
+                        <p> Humanity finds a mysterious, obviously artificial object buried beneath the Lunar surface and, with the intelligent computer H.A.L. 9000, sets off on a quest.</p>
+
+                        <a href="http://www.imdb.com/title/tt0062622/" target="_blank"><i>2001 A Space odyssey</i></a>
+                    </div>
+                </div>
+
+            </div> <!-- row -->
+
+
+
+        <!-- put two "rows" into two tabs -->
+
+            <div class="favorite_section">
+                <ul class="nav nav-tabs">
+                    <li role="presentation" class="active"><a href="#bands" aria-controls="bands" role="tab" data-toggle="tab">Bands</a></li>
+                    <li role="presentation"><a href="#foods"  aria-controls="foods" role="tab" data-toggle="tab">Foods</a></li>
+                </ul>
+
+                <!-- The tab panes for each tab. Bootstrap's JavaScript uses the attributes of the
+              li elements to display the correct tab panel when a tab is clicked.  -->
+
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="bands">
+                        <div class="favorite_section">
+                            <h2>Bands</h2>
+                            <p> <span>One of my favorite bands is <a href="http://yesworld.com/" target="_blank"><span id='favorite_band'><b>Yes</b></span></a></span> </p>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="foods">
+                        <div class="favorite_section">
+                            <h2>Foods</h2>
+                            <p> These are three favorite foods:</p>
+                            <ul>
+                                <li><span id="most_favorite">Steak</span></li>
+                                <li>Mac and Chees</li>
+                                <li>Spagetti</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        <!-- put two "rows" into two tabs -->
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="favorite_section">
+                        <h2><span class="glyphicon glyphicon glyphicon-camera"></span>Pictures<span class="glyphicon glyphicon glyphicon-camera"></span> </h2>
+                        <p> A picture from https://commons.wikimedia.org/wiki/Main_Page</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <img class="img-circle" src="Rally_Dakar_2009_9-2.jpg">
+                </div>
+            </div>
+
+
+            <div class="favorite_section">
+                <h2>Books</h2>
+
+                <table id="my_table">
+                    <tr><th>Book Name</th> <th>Author</th> <th>Link</th></tr>
+                    <tr><td>The Mists of Avalon</td><td>Marion Zimmer Bradley</td><td>https://en.wikipedia.org/wiki/The_Mists_of_Avalon</td></tr>
+                    <tr><td>Rendezvous with Rame</td><td>Arthur C. Clake</td><td>https://en.wikipedia.org/wiki/Rendezvous_with_Rama</td></tr>
+                </table>
+
+            </div>
+
+
+            <div class="favorite_section">
+                <h2>Links</h2>
+
+                <p>Here's a link to my first Web Page: <a href="Lab2%20Essentials%20Part%201.html" target="_blank"><span id='favorite_link'><b>Lab2 Essentials Part 1</b></span></a></p>
+
+            </div>
+
+
+        </div> <!-- container -->
+
+    </body>
+
+</html>
+

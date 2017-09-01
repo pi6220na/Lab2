@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab2 Essentials Part 1</title>
+    <meta charset="UTF-8">
+
+    <!-- The viewport is the visible area of a page. Pages may be wider
+    than the screen or browser window; and pages are often longer than
+    the browser window. This tag sets the width of the page equal to the
+    width of the browser window. The height stays the same. -->
+    <meta name="viewport" content="width=device-width initial-scale=1">
+
+    <!-- Include Bootstrap. This downloads Bootstrap from a CDN. You can
+     also host Bootstrap on your own server, but it's usually faster for the
+     user for their browser to fetch it from a CDN. -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+
+</head>
+<body>
+
+<div class="container">
+
+    <div class="jumbotron">
+        <h1>Favorite Java Program: Card Game Golf</h1>
+        <p>This is a card game for up to six players.</p>
+        <p>It has an elementary AI built-in to play against the computer.</p>
+    </div>
+    <pre>
+        <code>
+            public static void main(String[] args) {
+
+        setupPlayers();
+
+        // outer loop deals six down cards to each player
+        do {
+
+            Deck.buildDeck();
+            Deck.shuffleDeck();
+            dealCardsToPlayers();
+
+            // inner play loop. Pulls a player from front of queue and puts into play.
+            // Returns player to back of queue at end of turn.
+            // round continues until a player has turned up all six table cards.
+            System.out.println("****** Start of Round ******");
+            do {
+
+                int playerIndex = playerPlaysQueue.pop(); // get next player from queue
+                Player currentPlayer = players.get(playerIndex);
+
+                currentPlayer.playTurn(players);
+
+                playerPlaysQueue.add(playerIndex); // put player back to end of queue
+
+
+            } while (!allCardsUp);
+
+
+            System.out.println();
+            GolfManager.numberOfRoundsPlayed++;
+            System.out.println("played test round #" + GolfManager.numberOfRoundsPlayed);
+            for (Player player : players) {
+                System.out.println("Player: " + player.name + " round score: " + player.scoreRound);
+                System.out.println("Player: " + player.name + " total score: " + player.score);
+            }
+
+
+        } while (numberOfRoundsPlayed < 2);  // regulation game is nine rounds
+
+
+        System.out.println();
+        System.out.println("************* G A M E   O V E R ***************");
+        for (Player player : players) {
+            System.out.println("Player: " + player.name + " final score: " + player.score);
+        }
+
+        stringScanner.close();
+        numberScanner.close();
+
+    } // end class main
+
+        </code>
+    </pre>
+
+    <p>Here is a link to the Java program on Github: <a href="https://github.com/pi6220na/GolfOOP">GolfOOP on Github</a></p>
+
+</div>
+
+
+
+</body>
+</html>
