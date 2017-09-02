@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 2 Advanced Part 2</title>
+    <link href="Lab%202%20Stylesheet.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+    <fieldset>
+        <legend>Conference Attendee Data</legend>
+        <form action="http://www.example.com/login.php" method="post" id="gradient">
+
+            <p>Username:
+                <input type="text" name="username" maxlength="70" required="required"/>
+            </p>
+
+            <p>Password:
+                <input type="password" name="password" required="required"/>
+            </p>
+
+            <p>Enter your email address:
+                <input type="email" name="email" required="required"/>
+            </p>
+
+            <p>Select t-shirt size:</p>
+                <select name="shirt" required="required">
+                    <option value="small">small</option>
+                    <option value="medium">medium</option>
+                    <option value="large">large</option>
+                </select>
+
+            <p>
+                <label for="DOB">Date of birth:</label>
+                <input type="date" name="dob" required="required"/>
+            </p>
+
+            <p>Do you want to receive email from conference sponsors?</p>
+            <div class="inputs">
+                <input type="radio" name="get_email" value="yes" checked="checked" id="yes"/>
+                <label for="yes" class="title">Yes</label>
+                <input type="radio" name="get_email" value="no" id="no"/>
+                <label for="no" class="title">No</label>
+            </div>
+
+            <p>Will you be attending the morning and/or afternoon session(s)?</p>
+            <div class="inputs">
+                <input type="checkbox" name="session_attending" value="morning" checked="checked"/>Morning
+                <input type="checkbox" name="session_attending" value="afternoon"/>Afternoon
+            </div>
+
+            <p>Do you have any special requests?</p>
+            <textarea name="special_requests" rows="6" cols="30">Enter your request...</textarea>
+
+            <p>
+                <input type="submit" value="Submit" id="submit"/>
+            </p>
+
+        </form>
+    </fieldset>
+</body>
+</html>
